@@ -16,13 +16,13 @@ events {
 
 stream {
     upstream dns_udp_upstreams {
-        server ${DNS1_PORT_53_UDP_ADDR}:53;
-        server ${DNS2_PORT_53_UDP_ADDR}:53;
+        server dns1:53;
+        server dns2:53;
     }
 
     upstream dns_tcp_upstreams {
-        server ${DNS1_PORT_53_TCP_ADDR}:53;
-        server ${DNS2_PORT_53_TCP_ADDR}:53;
+        server dns1:53;
+        server dns2:53;
     }
 
     server {
